@@ -9,6 +9,12 @@ class GamesController < ApplicationController
       format.json { render json: @games }
     end
   end
+  
+  
+  def import
+	Game.import(params[:file])
+	redirect_to root_url, notice: "Games imported."
+  end
 
   # GET /games/1
   # GET /games/1.json

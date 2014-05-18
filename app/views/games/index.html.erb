@@ -1,59 +1,94 @@
+<div class="main">
+</br>
+</br>
+
+
+
+
+
+
+
+<center><form style='margin: 0; padding: 0' id='myform' action ="games/search" method="post">
+<b><p style='font-size:13px;'><%= link_to 'HOME', root_path %> &nbsp;&nbsp;<%= link_to 'VIEW ALL GAMES', games_path %> &nbsp;&nbsp; </b>
+<input name = "key" type="input" />
+<input style='display:inline;' value="Search Games" type="submit"/></p>
+</form> </center>
+</br>
+
 <h3>
+<center>
 <% ('A'...'Z').each do |letter| -%>
 <%= link_to letter, games_path(:starts_with => letter) %>
 <% end -%>
-
-<%= link_to 'All Games', games_path %>
 </h3>
-
-
+</center>
+<center>
 <h3>
 <% ('2005'..'2011').each do |releaseyear| -%>
 <%= link_to releaseyear, games_path(:released_in => releaseyear) %>
 <% end -%>
 
-<%= link_to 'All Games', games_path %>
 </h3>
+</center>
+</br>
+</br>
+<%if (@games.length<1) %>
+</br>
+</br>
+	<p>There are currently no games in the selected category!</p>
+</br>
+</br>	
+<% else %>	
 
-<h1>Listing games</h1>
+
 
 <table>
-  <tr>
-    <th>Id</th>
-    <th>Title</th>
-    <th>Publisher</th>
-    <th>Year</th>
-    <th>Genre</th>
-    <th>Platform</th>
-    <th>Description</th>
-    <th>Picture</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
 <% @games.each do |game| %>
-  <tr>
-    <td><%= game.id %></td>
-    <td><%= game.title %></td>
-    <td><%= game.publisher %></td>
-    <td><%= game.year %></td>
-    <td><%= game.genre %></td>
-    <td><%= game.platform %></td>
-    <td><%= game.description %></td>
-    <td><img src='<%= game.picture %>'/></td>
-    <td><%= link_to 'Show', game %></td>
-    <td><%= link_to 'Edit', edit_game_path(game) %></td>
-    <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+
+      <tr class="border_bottom">
+           <td rowspan="6">
+           <img id='smallpic'src='<%= game.picture %>'/>
+           </td>
+           <td style='color:#A1A1A1; font-size:17px;'>
+           <%= link_to game.title, game %>
+           </td>
+      </tr>
+      <tr>
+           <td style='color:#A1A1A1;'>
+           Release year: <%= game.year %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1;'>
+           Publisher: <%= game.publisher %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1;'>
+           Genre: <%= game.genre %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1;'>
+           Platforms: <%= game.platform %>
+           </td>
+      </tr>
+	  <tr class="border_bottom">
+           <td colspan="2" style='color:#A1A1A1; text-align:justify;'>
+           <%= game.description %>
+           </td>
+      </tr>
+	<% end %>  
+ </table> 
+
+
 
 <br />
-
+<% end %>
 <%= link_to 'New Game', new_game_path %>
 <h2> Import Games </h2>
 <%= form_tag import_games_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
+</div>

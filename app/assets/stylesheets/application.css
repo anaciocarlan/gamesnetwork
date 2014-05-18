@@ -10,9 +10,88 @@
  *
  *= require_self
  *= require_tree .
+
  */
-img{
+ 
+body, html {margin: 35px auto; width: 1000px; background: url(b.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;}
+
+a:link {color:#FFFFFF; text-decoration:none;}}      /* unvisited link */
+a:visited {color:#9C9C9C; text-decoration:none;}}  /* visited link */
+a:hover {color:#000000; text-decoration:none;}}  /* mouse over link */
+a:active {color:#00FF00;}  /* selected link */ 
+
+#smallpic
+{min-width: 200px;max-width: 200px;min-height: 200px;}
+
+#bigpic{
 	min-width: 400px;
     max-width:400px;
 	min-height: 400px;
 }
+
+.main
+{border:2px solid #a1a1a1;
+padding:10px ; 
+background:#dddddd;
+width:1000px;
+border-radius:25px;
+background: #000000;
+}
+
+
+#container
+{
+border:2px solid #a1a1a1;
+padding:10px 40px; 
+background:#dddddd;
+width:500px;
+height: 120px;
+border-radius:25px;
+position: absolute;
+top:0;
+bottom: 0;
+left: 0;
+right: 0;
+margin: auto;
+opacity:0.7;
+}
+
+tr.border_bottom td {
+  border-bottom:1pt solid white;
+
+}
+
+
+table#showtable td {
+    padding: 5px;
+    border: solid #000 1px;
+
+}
+
+#results
+{
+font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+width:100%;
+border-collapse:collapse;
+}
+#results td, #results th 
+{
+font-size:1em;
+border:1px solid #206885;
+padding:3px 7px 2px 7px;
+}
+#results th 
+{
+font-size:1.1em;
+text-align:left;
+padding-top:5px;
+padding-bottom:4px;
+background-color:#A7C942;
+color:#ffffff;
+}
+#results tr.alt td 
+{
+color:#000000;
+background-color:#EAF2D3;
+}
+

@@ -1,9 +1,13 @@
 class GamesController < ApplicationController
   # GET /games
   # GET /games.json
+  
+  def home
+	@homepage=true
+  end
+  
   def index
-
-    if (params[:starts_with])
+	if (params[:starts_with])
       @games = Game.by_first_letter(params[:starts_with])
     elsif (params[:released_in])
 		@games = Game.by_release_year(params[:released_in])
@@ -22,6 +26,10 @@ class GamesController < ApplicationController
 	Game.import(params[:file])
 	redirect_to root_url, notice: "Games imported."
   end
+  
+  def search
+	@games = Game.find(:all, :conditions => ["title LIKE ?", "%#{params[:key]}%"])
+  end 
 
   # GET /games/1
   # GET /games/1.json
@@ -46,9 +54,9 @@ class GamesController < ApplicationController
   end
 
   # GET /games/1/edit
-  def edit
-    @game = Game.find(params[:id])
-  end
+  #def edit
+  #  @game = Game.find(params[:id])
+  #end
 
   # POST /games
   # POST /games.json
@@ -68,29 +76,29 @@ class GamesController < ApplicationController
 
   # PUT /games/1
   # PUT /games/1.json
-  def update
-    @game = Game.find(params[:id])
+  #def update
+  #  @game = Game.find(params[:id])
 
-    respond_to do |format|
-      if @game.update_attributes(params[:game])
-        format.html { redirect_to @game, notice: 'Game was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @game.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  #  respond_to do |format|
+  #    if @game.update_attributes(params[:game])
+  #      format.html { redirect_to @game, notice: 'Game was successfully updated.' }
+  #      format.json { head :no_content }
+  #    else
+  #      format.html { render action: "edit" }
+  #      format.json { render json: @game.errors, status: :unprocessable_entity }
+  #    end
+  #  end
+  #end
 
   # DELETE /games/1
   # DELETE /games/1.json
-  def destroy
-    @game = Game.find(params[:id])
-    @game.destroy
+  #def destroy
+  #  @game = Game.find(params[:id])
+  #  @game.destroy
 
-    respond_to do |format|
-      format.html { redirect_to games_url }
-      format.json { head :no_content }
-    end
-  end
+  #  respond_to do |format|
+  #    format.html { redirect_to games_url }
+  #    format.json { head :no_content }
+  #  end
+  #end
 end

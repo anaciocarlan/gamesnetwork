@@ -1,9 +1,11 @@
 Gamesnetwork::Application.routes.draw do
+  get "games/home"
   resources :games do
 	collection { post :import }
+	post 'search', :on =>:collection
   end
 
-root :to => 'games#index'
+root :to => 'games#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,28 @@
+
+<div class='main'>
+<center><h1>Search results</h1></center>
+
+<% if (@games.length <1) %>
+<p> There are no results for your search!</p>
+
+<% else %>
+
+<table id='results'>
+<tr>
+<td><p align="center" style='color:white; font-size:30px;'><i><b>Game </b></i></td>
+<td><p align="center" style='color:white; font-size:30px;'><i><b>Release Year</b></i></td>
+<td><p align="center" style='color:white; font-size:30px;'><i><b>Publisher </b></i></td>
+</tr>
+<% @games.each do |game| %>
+<tr>
+<td style='color:#A1A1A1; font-size:20px;'><a href="<%=game.id%>"><%=game.title%></a>
+<td style='color:#A1A1A1; font-size:20px;'><%=game.year%></td>
+<td style='color:#A1A1A1; font-size:20px;'><%=game.publisher%></td>
+</td>
+</tr>
+<% end %>
+</table>
+
+<% end %>
+<p> <a href="/games"> Back</a> </body>
+</div>

@@ -1,45 +1,47 @@
-<p id="notice"><%= notice %></p>
+<div class="main">
 
-<p>
-  <b>Id:</b>
-  <%= @game.id %>
+
+<table id='showtable'>
+      <tr>
+           <td rowspan="6">
+           <img id='bigpic'src='<%= @game.picture %>'/>
+           </td>
+           <td style='color:white; font-size:30px;'>
+           <%= link_to @game.title, @game %>
+           </td>
+      </tr>
+      <tr>
+           <td style='color:#A1A1A1; font-size:20px;'>
+           <b>Release year:</b> <%= @game.year %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1; font-size:20px;'>
+           <b>Publisher:</b> <%= @game.publisher %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1; font-size:20px;'>
+           <b>Genre:</b> <%= @game.genre %>
+           </td>
+      </tr>
+	  <tr>
+           <td style='color:#A1A1A1; font-size:20px;'>
+           <b>Platforms:</b> <%= @game.platform %>
+           </td>
+      </tr>
+
+ 
+ </table> 
+
+
+<p style='color:white; font-size:15px; text-align:justify;
+ text-justify:inter-word;'>
+   <%= @game.description %>
 </p>
 
-<p>
-  <b>Title:</b>
-  <%= @game.title %>
-</p>
-
-<p>
-  <b>Publisher:</b>
-  <%= @game.publisher %>
-</p>
-
-<p>
-  <b>Year:</b>
-  <%= @game.year %>
-</p>
-
-<p>
-  <b>Genre:</b>
-  <%= @game.genre %>
-</p>
-
-<p>
-  <b>Platform:</b>
-  <%= @game.platform %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @game.description %>
-</p>
-
-<p>
-  <b>Picture:</b>
-  <%= @game.picture %>
-</p>
 
 
-<%= link_to 'Edit', edit_game_path(@game) %> |
+
 <%= link_to 'Back', games_path %>
+</div>

@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+img{
+	min-width: 400px;
+    max-width:400px;
+	min-height: 400px;
+}

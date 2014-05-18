@@ -1,4 +1,19 @@
+<h3>
+<% ('A'...'Z').each do |letter| -%>
+<%= link_to letter, games_path(:starts_with => letter) %>
+<% end -%>
 
+<%= link_to 'All Games', games_path %>
+</h3>
+
+
+<h3>
+<% ('2005'..'2011').each do |releaseyear| -%>
+<%= link_to releaseyear, games_path(:released_in => releaseyear) %>
+<% end -%>
+
+<%= link_to 'All Games', games_path %>
+</h3>
 
 <h1>Listing games</h1>
 
@@ -26,7 +41,7 @@
     <td><%= game.genre %></td>
     <td><%= game.platform %></td>
     <td><%= game.description %></td>
-    <td><%= game.picture %></td>
+    <td><img src='<%= game.picture %>'/></td>
     <td><%= link_to 'Show', game %></td>
     <td><%= link_to 'Edit', edit_game_path(game) %></td>
     <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -2,7 +2,14 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+
+    if (params[:starts_with])
+      @games = Game.by_first_letter(params[:starts_with])
+    elsif (params[:released_in])
+		@games = Game.by_release_year(params[:released_in])
+	else
+      @games = Game.all
+	end
 
     respond_to do |format|
       format.html # index.html.erb

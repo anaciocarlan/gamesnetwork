@@ -15,9 +15,9 @@
  
 body, html {margin: 35px auto; width: 1000px; background: url(b.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;}
 
-a:link {color:#FFFFFF; text-decoration:none;}}      /* unvisited link */
-a:visited {color:#9C9C9C; text-decoration:none;}}  /* visited link */
-a:hover {color:#000000; text-decoration:none;}}  /* mouse over link */
+a:link {color:#FFFFFF; text-decoration:none;}      /* unvisited link */
+a:visited {color:#9C9C9C; text-decoration:none;} /* visited link */
+a:hover {color:#000000; text-decoration:none;} /* mouse over link */
 a:active {color:#00FF00;}  /* selected link */ 
 
 #smallpic

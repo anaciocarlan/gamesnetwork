@@ -100,3 +100,11 @@ Game.create!([
   {title: "World of Goo ", publisher: "2D Boy", year: "2008", genre: "Puzzle", platform: "Windows, OS X, Linux", description: "This addictive, physics-based puzzle game first originated on the Wii, but was so popular it gooed its way onto a handful of other platforms before long. Created by only three people, World of Goo is brimming with challenging levels that will have you scheming up new ways to manipulate the different varieties of goo balls. For such a simple concept, it’s amazing how many different ways there are to go about each puzzle, and how difficult some of them really are. Don’t settle for lesser goo games, World of Goo is definitely where it’s at.", picture: "http://upload.wikimedia.org/wikipedia/en/7/79/WoG-BoxArt.png"},
   {title: "World of Warcraft: Cataclysm ", publisher: "Blizzard Entertainment", year: "2010", genre: "MMORPG", platform: "Windows, OS X", description: "When you run the world's most popular MMORPG and everyone and their grandmother recognizes its name, you know you've done something right. So when Blizzard announced it was revamping almost all of Azeroth, there was a lot of surprise. Blizzard's gambit paid off though -- right from the start, World of Warcraft: Cataclysm is a more cinematic, streamlined and entertaining game than it was when it launched. Although the expansion-only content was smaller in scale than Wrath or Burning Crusade, it was of a consistently higher quality. Hate it or love it, World of Warcraft: Cataclysm is an impressive showing of Blizzard's strength.", picture: "http://upload.wikimedia.org/wikipedia/en/b/bd/Cataclysm_Cover_Art.png"}
 ])
+Location.create!([
+  {address: "University of Aberdeen, UK", latitude: 57.1650429, longitude: -2.1002589}
+])
+User.create!([
+  {email: "ana.ciocarlan@yahoo.com", password_hash: "$2a$10$s86JXPy5MFprtFYEkfbYR.bbpPDlaV/GhWy6MMS/BvCVNBy0u9Qdm", password_salt: "$2a$10$s86JXPy5MFprtFYEkfbYR.", language: nil},
+  {email: "nedelea.florin.93@gmail.com", password_hash: "$2a$10$J5.SpwFlflqz.bLrEaPpuenLNjPtOwnhB8nhrBwP9Bz7IL.krScl.", password_salt: "$2a$10$J5.SpwFlflqz.bLrEaPpue", language: nil},
+  {email: "abc@yahoo.com", password_hash: "$2a$10$rJ7WPrRhcHX3lfPqisY6QeJZuBSN/8JWF5infflGv6OI11ziWgkRK", password_salt: "$2a$10$rJ7WPrRhcHX3lfPqisY6Qe", language: "wk"}
+])

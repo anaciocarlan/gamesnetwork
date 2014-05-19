@@ -1,0 +1,15 @@
+<div class="main">
+<center>
+<h2>This month's best games is:</h2>
+
+<h2><%= @games.title %></h2>
+<h4><%= @games.description %></h4>
+
+<img src='<%= @games.picture %>'/>
+</br>
+</br>
+<%= link_to 'Back', games_path %>
+</br>
+</br>
+</center>
+</div>

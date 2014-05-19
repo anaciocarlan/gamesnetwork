@@ -2,4 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+ welcome:
+ 
+  homepage: "Welcome to Games Network!"
+  search: "Search Games"
+  title: "Welcome to Games Network: your source of fun, games and entertainment!"
+  paragraph: "Feel free to browse our amazing collection of games and become part of the gaming community! You can find a great selection of games on our website: from classic, fun games to the latest games published. Register now! "
+  game: "Game "
+  released: "Release year: "
+  publisher: "Publisher: "
+  genre: "Genre: "
+  platforms: "Platforms: "
+  noresults: "There are no results for your search! "
+  loggedin: "Logged in as "

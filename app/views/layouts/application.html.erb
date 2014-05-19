@@ -10,17 +10,19 @@
 
 <div class="nav">
 	<% if current_user %>
-		Logged in as <%= current_user.email %>.
-		<%= link_to "Log out", :controller => "sessions", :action => "destroy" %>
+		 <%= t 'welcome.loggedin' %> <%= current_user.email %>. |
+		<%= link_to "Log out", :controller => "sessions", :action => "destroy" %> |
+		<%= link_to "Profile", :controller => "sessions", :action => "profile" %>
 	<% else %>
 		<%= link_to "Sign Up", :controller => "users", :action => "new" %> or
 		<%= link_to "Log In", :controller => "sessions", :action => "new" %>
 	<% end %>
 </div>
- 
+<center><h2>
 <% flash.each do |name, msg| %>
 	<%= content_tag :div, msg, :id => "flash_#{name}" %>
 <% end %>
+</h2></center>
 <%= yield %>
 
 </body>

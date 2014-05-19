@@ -30,7 +30,10 @@ class GamesController < ApplicationController
   def search
 	@games = Game.find(:all, :conditions => ["title LIKE ?", "%#{params[:key]}%"])
   end 
-
+  
+  def gom
+	@games = Game.find(77)
+  end
   # GET /games/1
   # GET /games/1.json
   def show

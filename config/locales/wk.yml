@@ -1,0 +1,13 @@
+wk:
+ welcome:
+  homepage: "Bienvenue sur Games Network!"
+  search: "Rechercher un jeux"
+  title: "Bienvenue sur Games Network: votre source de plaisir, de jeux et de divertissement!"
+  paragraph: "N'hésitez pas à parcourir notre collection incroyable de jeux et de faire partie de la communauté des joueurs! Vous pouvez trouver un grand choix de jeux sur notre site internet: de, des jeux amusants classiques aux derniers jeux publiés. Inscrivez-vous maintenant!"
+  game: "Jeux "
+  released: "Année de sortie: "
+  publisher: "Editeur: "
+  genre: "Genre: "
+  platforms: "Plate-formes: "
+  noresults: "Il n'y a pas de résultats pour votre recherche! "
+  loggedin: "Connecté comme "

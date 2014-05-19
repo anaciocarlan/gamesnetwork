@@ -2,17 +2,16 @@
 </br>
 </br>
 
-
-
-
-
-
-
 <center><form style='margin: 0; padding: 0' id='myform' action ="games/search" method="post">
-<b><p style='font-size:13px;'><%= link_to 'HOME', root_path %> &nbsp;&nbsp;<%= link_to 'VIEW ALL GAMES', games_path %> &nbsp;&nbsp; </b>
+<b><p style='font-size:13px;'><%= link_to 'HOME | ', root_path %> &nbsp;&nbsp;<%= link_to ' GAME OF THE MONTH | ', :controller => "games", :action => "gom" %> &nbsp;&nbsp; <%= link_to ' ALL GAMES | ', games_path %> &nbsp;&nbsp; </b>
 <input name = "key" type="input" />
 <input style='display:inline;' value="Search Games" type="submit"/></p>
 </form> </center>
+</br>
+<center>
+<p> <%= t 'welcome.title' %> </p>
+<p> <%= t 'welcome.paragraph' %> </p>
+</center>
 </br>
 
 <h3>
@@ -35,7 +34,7 @@
 <%if (@games.length<1) %>
 </br>
 </br>
-	<p>There are currently no games in the selected category!</p>
+	<p><%= t 'welcome.noresults' %></p>
 </br>
 </br>	
 <% else %>	
@@ -55,22 +54,22 @@
       </tr>
       <tr>
            <td style='color:#A1A1A1;'>
-           Release year: <%= game.year %>
+           <%= t 'welcome.released' %>  <%= game.year %>
            </td>
       </tr>
 	  <tr>
            <td style='color:#A1A1A1;'>
-           Publisher: <%= game.publisher %>
+           <%= t 'welcome.publisher' %>  <%= game.publisher %>
            </td>
       </tr>
 	  <tr>
            <td style='color:#A1A1A1;'>
-           Genre: <%= game.genre %>
+           <%= t 'welcome.genre' %> <%= game.genre %>
            </td>
       </tr>
 	  <tr>
            <td style='color:#A1A1A1;'>
-           Platforms: <%= game.platform %>
+           <%= t 'welcome.platforms' %> <%= game.platform %>
            </td>
       </tr>
 	  <tr class="border_bottom">

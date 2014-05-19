@@ -2,6 +2,8 @@ Gamesnetwork::Application.routes.draw do
   get "log_out" => "sessions#destroy"
   get "log_in" => "sessions#new"
   get "sign_up" => "users#new"
+  get "my_profile" => "sessions#profile"
+  get "game_of_the_month" => "games#gom"
   resources :users
   resources :sessions
   

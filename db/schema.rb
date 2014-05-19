@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140519105319) do
+ActiveRecord::Schema.define(:version => 20140519143915) do
+
+  create_table "comments", :force => true do |t|
+    t.string   "title"
+    t.text     "post"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.integer  "user_id"
+    t.integer  "game_id"
+  end
 
   create_table "games", :force => true do |t|
     t.string   "title"
@@ -31,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20140519105319) do
     t.string   "password_salt"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false
+    t.string   "language"
   end
 
 end

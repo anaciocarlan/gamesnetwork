@@ -34,6 +34,8 @@ class GamesController < ApplicationController
   def gom
 	@games = Game.find(77)
   end
+  def about
+  end
   # GET /games/1
   # GET /games/1.json
   def show

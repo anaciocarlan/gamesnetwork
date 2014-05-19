@@ -4,15 +4,16 @@ Gamesnetwork::Application.routes.draw do
   get "sign_up" => "users#new"
   get "my_profile" => "sessions#profile"
   get "game_of_the_month" => "games#gom"
-  resources :users
-  resources :sessions
+  get "about" => "games#about"
+
   
   get "games/home"
   resources :games do
 	collection { post :import }
 	post 'search', :on =>:collection
   end
-
+  resources :users
+  resources :sessions
 root :to => 'games#home'
   # The priority is based upon order of creation:
   # first created -> highest priority.

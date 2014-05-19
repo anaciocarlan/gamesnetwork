@@ -10,7 +10,9 @@
 <input value="<%= t 'welcome.search' %>" type="submit"/>
 </form> </center>
 </br>
-<%= link_to 'Games', games_path %> | 
-<%= link_to 'Register', :controller => "users", :action => "new"%> or
-<%= link_to 'Login', :controller => "sessions", :action => "new"%>
+<center>
+<%= link_to 'About ', :controller => "games", :action => "about"%> |
+<%= link_to ' Games ', games_path %> | 
+<%= link_to ' Game of the Month', :controller => "games", :action => "gom"%> 
+</center>
 </div>

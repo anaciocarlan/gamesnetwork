@@ -3,7 +3,7 @@
 </br>
 
 <center><form style='margin: 0; padding: 0' id='myform' action ="games/search" method="post">
-<b><p style='font-size:13px;'><%= link_to 'HOME | ', root_path %> &nbsp;&nbsp;<%= link_to ' GAME OF THE MONTH | ', :controller => "games", :action => "gom" %> &nbsp;&nbsp; <%= link_to ' ALL GAMES | ', games_path %> &nbsp;&nbsp; </b>
+<b><p style='font-size:13px;'><%= link_to 'HOME | ', root_path %> &nbsp;&nbsp;<%= link_to ' GAME OF THE MONTH | ', :controller => "games", :action => "gom" %> &nbsp;&nbsp; <%= link_to ' ALL GAMES | ', games_path %> &nbsp;&nbsp; <%= link_to ' ABOUT  ', :controller => "games", :action => "about" %> &nbsp;&nbsp; </b>
 <input name = "key" type="input" />
 <input style='display:inline;' value="Search Games" type="submit"/></p>
 </form> </center>

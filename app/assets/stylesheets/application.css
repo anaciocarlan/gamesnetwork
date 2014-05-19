@@ -13,7 +13,7 @@
 
  */
  
-body, html {margin: 35px auto; width: 1000px; background: url(b.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;}
+body, html {color: white; margin: 35px auto; width: 1000px; background: url(b.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; background-size: cover;}
 
 a:link {color:#FFFFFF; text-decoration:none;}      /* unvisited link */
 a:visited {color:#9C9C9C; text-decoration:none;} /* visited link */
@@ -36,6 +36,7 @@ background:#dddddd;
 width:1000px;
 border-radius:25px;
 background: #000000;
+color: white;
 }
 
 
@@ -54,6 +55,7 @@ left: 0;
 right: 0;
 margin: auto;
 opacity:0.7;
+
 }
 
 tr.border_bottom td {
@@ -94,4 +96,17 @@ color:#ffffff;
 color:#000000;
 background-color:#EAF2D3;
 }
-
+.nav
+{
+border:2px solid #a1a1a1;
+padding:10px ; 
+background:#dddddd;
+color: white;
+background: #000000;
+ position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    margin:0 auto;
+ 
+}

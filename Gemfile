@@ -25,6 +25,7 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 gem 'seed_dump'
+gem "bcrypt-ruby", :require => "bcrypt"
 
 
 # Gems used only for assets and not required

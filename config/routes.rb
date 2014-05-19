@@ -1,4 +1,10 @@
 Gamesnetwork::Application.routes.draw do
+  get "log_out" => "sessions#destroy"
+  get "log_in" => "sessions#new"
+  get "sign_up" => "users#new"
+  resources :users
+  resources :sessions
+  
   get "games/home"
   resources :games do
 	collection { post :import }

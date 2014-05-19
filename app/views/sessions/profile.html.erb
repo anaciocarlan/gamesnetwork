@@ -3,7 +3,9 @@
 <% if current_user %>
 
 <h1>Hi there!</h1>
-<h2>Your profile is empty at the moment!</h2>
+
+<h2>Here you can contribute to the games database!</h2>
+<%= link_to 'New Game', new_game_path %>
 </br>
 </br>
 <%= link_to 'Back', games_path %>

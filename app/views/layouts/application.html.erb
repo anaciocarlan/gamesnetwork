@@ -14,6 +14,7 @@
 		<%= link_to "Log out", :controller => "sessions", :action => "destroy" %> |
 		<%= link_to "Profile", :controller => "sessions", :action => "profile" %>
 	<% else %>
+		Welcome Guest! 
 		<%= link_to "Sign Up", :controller => "users", :action => "new" %> or
 		<%= link_to "Log In", :controller => "sessions", :action => "new" %>
 	<% end %>

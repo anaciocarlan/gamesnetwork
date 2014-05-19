@@ -1,0 +1,30 @@
+<div class="main">
+<h1 style="color:white;">Add location</h1>
+
+
+<%= form_for Location.new do |f| %>
+	
+	
+	<p>
+		<%= f.label :address %> </br>
+		<%= f.text_field :address %>
+	</p>
+	
+	<p>
+		<%= f.label :latitude %> </br>
+		<%= f.text_field :latitude %>
+	</p>
+	
+	<p>
+		<%= f.label :longitude %> </br>
+		<%= f.text_field :longitude %>
+	</p>
+	
+	
+		
+	<p class="button"><%= f.submit %> </p>
+<% end %>
+
+<%= link_to 'Go Back', games_path %>
+</br></br>
+</div>

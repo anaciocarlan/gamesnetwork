@@ -5,6 +5,7 @@ Gamesnetwork::Application.routes.draw do
   get "my_profile" => "sessions#profile"
   get "game_of_the_month" => "games#gom"
   get "about" => "games#about"
+  get "add_location" => "locations#new"
 
   
   get "games/home"
@@ -12,6 +13,7 @@ Gamesnetwork::Application.routes.draw do
 	collection { post :import }
 	post 'search', :on =>:collection
   end
+  resources :locations
   resources :users
   resources :sessions
 root :to => 'games#home'

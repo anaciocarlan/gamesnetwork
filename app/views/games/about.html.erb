@@ -8,6 +8,13 @@
 </br>
 <p> <%= t 'welcome.about2' %> </p>
 
+<h3> Address: <%= @locations.address %> </h3>
+<h4> Latitude: <%= @locations.latitude %> </h4>
+<h4> Longitude: <%= @locations.longitude %> </h4>
+
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@locations.latitude}%2C#{@locations.longitude}" %>
+
+
 <%= link_to 'Back', games_path %>
 </center>
 </div>

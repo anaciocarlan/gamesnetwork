@@ -35,6 +35,7 @@ class GamesController < ApplicationController
 	@games = Game.find(77)
   end
   def about
+  @locations = Location.find(1)
   end
   # GET /games/1
   # GET /games/1.json
